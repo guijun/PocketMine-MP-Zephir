@@ -26,7 +26,9 @@
 
 #include "kernel/fcall.h"
 #include "kernel/backtrace.h"
-
+#ifndef IS_CONSTANT_ARRAY
+#define IS_CONSTANT_ARRAY IS_CONSTANT_AST
+#endif
 /*
  * Memory Frames/Virtual Symbol Scopes
  *------------------------------------
